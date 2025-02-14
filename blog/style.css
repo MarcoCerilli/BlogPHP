@@ -1,0 +1,250 @@
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/sfondo.jpg') no-repeat center center/cover;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: #1e2a47;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* LAYOUT PRINCIPALE */
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 30%;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.sidebar h2 {
+    color: #2980b9;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #2980b9;
+}
+
+/* CONTENUTO PRINCIPALE */
+.content {
+    width: 70%;
+    padding: 20px;
+}
+
+/* POST */
+.post {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+.post-title {
+    color: #2980b9;
+    font-size: 24px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e2a47;
+    color: white;
+    margin-top: 40px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #3498db;
+}
+
+/* STILIZZAZIONE FORM AGGIUNGI POST */
+
+/* Form e suoi elementi */
+form {
+    background-color: #f9f9f9; /* Colore di sfondo chiaro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input e textarea */
+input[type="text"], textarea {
+    width: 100%; /* Fa in modo che gli input e le textarea si adattino alla larghezza del form */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Etichette dei campi */
+label {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Bottone per inviare il form */
+button[type="submit"] {
+    background-color: #4CAF50; /* Colore verde per il bottone */
+    color: white;
+    font-size: 1.1em;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Colore verde più scuro al passaggio del mouse */
+}
+
+/* Messaggi di stato */
+p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #28a745; /* Colore verde per il messaggio di successo */
+}
+
+p.error {
+    color: #dc3545; /* Colore rosso per il messaggio di errore */
+}
+/* Stile per il bottone Aggiungi Post */
+.btn-aggiungi {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db; /* Blu brillante */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+.btn-aggiungi:hover {
+    background-color: #2980b9; /* Blu più scuro */
+    transform: translateY(-2px); /* Sollevamento leggero del bottone */
+}
+
+/* Focus effect */
+.btn-aggiungi:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.6); /* Ombra blu per focus */
+}
