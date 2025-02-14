@@ -1,3 +1,7 @@
+![image](https://github.com/user-attachments/assets/6bb89abc-cadb-4bff-be45-492d59376082)
+
+
+
 # Blog in PHP
 
 Questo è un semplice blog creato con PHP, MySQL e CSS, che permette di visualizzare articoli e gestire contenuti dinamici.
