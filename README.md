@@ -39,6 +39,5 @@ Per personalizzare il blog:
 - Modifica i file di template HTML per adattare il design alle tue preferenze.
 - Modifica il codice PHP per aggiungere nuove funzionalità, come il sistema di commenti o l'integrazione con altre API.
 
-## Licenza
-Questo progetto è sotto licenza MIT. Vedi il file `LICENSE` per maggiori dettagli.
+
 
